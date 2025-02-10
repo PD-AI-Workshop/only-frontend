@@ -1,0 +1,22 @@
+.headerLinks {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        list-style-type: none;
+    }
+
+    a {
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        gap: 22px !important;
+    }
+}

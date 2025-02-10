@@ -1,0 +1,146 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px;
+    height: auto;
+    padding: 62px 0px;
+    flex: 1;
+
+    h2 {
+        font-family: 'Inter', Helvetica, sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .onTrend {
+        height: 425px;
+        width: 1282px;
+
+        .onTrendArticlesContainer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            height: 351px;
+
+            img {
+                border-top-left-radius: 12px;
+            }
+
+            .narrowVersion {
+                display: grid;
+                grid-template-columns: 20px 372px 20px;
+                grid-template-rows: 2fr 1fr 1fr;
+                grid-column: auto;
+                grid-template-areas:
+                    "img img img"
+                    ". cont ."
+                    ". info .";
+                height: 350px;
+                width: 415px;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .neuralNetworks {
+        height: 647px;
+        width: 1282px;
+
+        img {
+            border-top-left-radius: 12px;
+        }
+
+        .onWideTrendArticlesContainer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+
+            .wideVersion {
+                display: grid;
+                grid-template-columns: 20px 588px 20px;
+                grid-template-rows: 3fr 2fr 1fr;
+                grid-column: auto;
+                grid-template-areas:
+                    "img img img"
+                    ". cont ."
+                    ". info .";
+                height: 573px;
+                width: 631px;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .recentArticles {
+        height: 898;
+        width: 1282px;
+
+        .onHorizontalTrendArticlesContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 24px;
+
+            .horizontalVersion {
+                display: grid;
+                grid-template-columns: 20px 631px 631px;
+                grid-template-rows: 2fr 2fr 1fr;
+                grid-column: auto;
+                grid-template-areas:
+                    ". cont img"
+                    ". cont img"
+                    ". info img";
+                height: 400px;
+                width: 1285px;
+                border-radius: 12px;
+
+                img {
+                    border-bottom-right-radius: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 20px 10px !important;
+
+        .onTrend,
+        .neuralNetworks,
+        .recentArticles {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .onTrendArticlesContainer,
+        .onWideTrendArticlesContainer,
+        .onHorizontalTrendArticlesContainer {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            height: auto !important;
+            gap: 20px !important;
+            margin-top: 24px !important;
+        }
+
+        .narrowVersion,
+        .wideVersion,
+        .horizontalVersion {
+            width: 100% !important;
+            height: auto !important;
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            grid-template-rows: auto auto auto !important;
+            grid-template-areas:
+                "img"
+                "cont"
+                "info" !important;
+            border-radius: 12px !important;
+        }
+    }
+}
