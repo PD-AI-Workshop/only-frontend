@@ -30,5 +30,9 @@ export const routes = [
     {
         path: PERCEPTRON_ROUTE,
         component: <Perceptron />
+    },
+    {
+        path: NOT_FOUND_ROUTE,
+        component: <NotFoundPage />
     }
 ]
